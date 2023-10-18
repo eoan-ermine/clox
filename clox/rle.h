@@ -6,12 +6,12 @@
 typedef struct {
   int capacity;
   int count;
-  uint8_t *values;
+  int *values;
 } RLEArray;
 
 void initRLEArray(RLEArray *array);
-void writeRLEArray(RLEArray *array, uint8_t value);
-uint8_t getRLEArray(RLEArray *array, uint8_t index);
+void writeRLEArray(RLEArray *array, int value);
+int getRLEArray(RLEArray *array, int index);
 void freeRLEArray(RLEArray *array);
 
 #endif

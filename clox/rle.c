@@ -9,12 +9,12 @@ void initValueArray(RLEArray *array) {
   array->count = 0;
 }
 
-void writeValueArray(RLEArray *array, uint8_t value) {
+void writeValueArray(RLEArray *array, int value) {
   if (array->capacity < array->count + 1) {
     int oldCapacity = array->capacity;
     array->capacity = GROW_CAPACITY(oldCapacity);
     array->values =
-        GROW_ARRAY(uint8_t, array->values, oldCapacity, array->capacity);
+        GROW_ARRAY(int, array->values, oldCapacity, array->capacity);
   }
 
   if (array->count == 0 || array->values[array->count - 1] != value) {
@@ -25,7 +25,7 @@ void writeValueArray(RLEArray *array, uint8_t value) {
   }
 }
 
-uint8_t getRLEArray(RLEArray *array, uint8_t index) {
+int getRLEArray(RLEArray *array, int index) {
   int current_position = 0;
   for (int i = 0, j = array->count / 2; i != j; ++i) {
     if (current_position + array->values[i * 2] - 1 < index) {
@@ -38,6 +38,6 @@ uint8_t getRLEArray(RLEArray *array, uint8_t index) {
 }
 
 void freeValueArray(RLEArray *array) {
-  FREE_ARRAY(uint8_t, array->values, array->capacity);
+  FREE_ARRAY(int, array->values, array->capacity);
   initValueArray(array);
 }
