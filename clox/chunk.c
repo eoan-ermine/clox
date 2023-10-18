@@ -34,6 +34,20 @@ int addConstant(Chunk *chunk, Value value) {
   return chunk->constants.count - 1;
 }
 
+void writeConstant(Chunk *chunk, Value value, int line) {
+  int constant_idx = addConstant(chunk, value);
+
+  if (constant_idx <= 255) {
+    writeChunk(chunk, OP_CONSTANT, line);
+    writeChunk(chunk, constant_idx, line);
+  } else {
+    writeChunk(chunk, OP_CONSTANT_LONG, line);
+    writeChunk(chunk, ((unsigned int)constant_idx >> (2 << 3)) & 0xff, line);
+    writeChunk(chunk, ((unsigned int)constant_idx >> (1 << 3)) & 0xff, line);
+    writeChunk(chunk, ((unsigned int)constant_idx >> (0 << 3)) & 0xff, line);
+  }
+}
+
 int getLine(Chunk *chunk, int instr_idx) {
   return getRLEArray(&chunk->lines, instr_idx);
 }
