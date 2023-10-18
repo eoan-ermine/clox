@@ -7,6 +7,7 @@ set(SOURCES
     clox/debug.c
     clox/main.c
     clox/memory.c
+    clox/rle.c
     clox/value.c
 )
 
