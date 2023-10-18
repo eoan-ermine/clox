@@ -3,13 +3,13 @@
 #include "memory.h"
 #include "rle.h"
 
-void initValueArray(RLEArray *array) {
+void initRLEArray(RLEArray *array) {
   array->values = NULL;
   array->capacity = 0;
   array->count = 0;
 }
 
-void writeValueArray(RLEArray *array, int value) {
+void writeRLEArray(RLEArray *array, int value) {
   if (array->capacity < array->count + 1) {
     int oldCapacity = array->capacity;
     array->capacity = GROW_CAPACITY(oldCapacity);
@@ -37,7 +37,7 @@ int getRLEArray(RLEArray *array, int index) {
   return '\0';
 }
 
-void freeValueArray(RLEArray *array) {
+void freeRLEArray(RLEArray *array) {
   FREE_ARRAY(int, array->values, array->capacity);
-  initValueArray(array);
+  initRLEArray(array);
 }
