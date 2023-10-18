@@ -9,6 +9,7 @@ set(SOURCES
     clox/memory.c
     clox/rle.c
     clox/value.c
+    clox/vm.c
 )
 
 add_executable(clox ${SOURCES})
