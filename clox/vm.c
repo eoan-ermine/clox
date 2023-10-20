@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+#include "chunk.h"
 #include "common.h"
 #include "debug.h"
 #include "vm.h"
@@ -45,6 +46,9 @@ static InterpretResult run() {
       push(constant);
       break;
     }
+    case OP_NEGATE:
+      push(-pop());
+      break;
     case OP_RETURN:
       printValue(pop());
       printf("\n");
