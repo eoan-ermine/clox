@@ -24,5 +24,7 @@ void freeVM();
 InterpretResult interpret(Chunk *chunk);
 void push(Value value);
 Value pop();
+Value top();
+void replace(Value value);
 
 #endif

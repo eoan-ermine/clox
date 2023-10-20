@@ -23,14 +23,17 @@ Value pop() {
   return *vm.stackTop;
 }
 
+Value top() { return *(vm.stackTop - 1); }
+
+void replace(Value value) { *(vm.stackTop - 1) = value; }
+
 static InterpretResult run() {
 #define READ_BYTE() (*vm.ip++)
 #define READ_CONSTANT() (vm.chunk->constants.values[READ_BYTE()])
 #define BINARY_OP(op)                                                          \
   do {                                                                         \
     double b = pop();                                                          \
-    double a = pop();                                                          \
-    push(a op b);                                                              \
+    replace(top() op b);                                                       \
   } while (false)
 
   for (;;) {
@@ -65,7 +68,7 @@ static InterpretResult run() {
       BINARY_OP(/);
       break;
     case OP_NEGATE:
-      push(-pop());
+      replace(-top());
       break;
     case OP_RETURN:
       printValue(pop());
