@@ -40,6 +40,10 @@ Value pop() {
 
 static Value peek(int distance) { return vm.stackTop[-1 - distance]; }
 
+static bool isFalsey(Value value) {
+  return IS_NIL(value) || (IS_BOOL(value) && !AS_BOOL(value));
+}
+
 void replace(Value value) { *(vm.stackTop - 1) = value; }
 
 static InterpretResult run() {
@@ -94,6 +98,9 @@ static InterpretResult run() {
       break;
     case OP_DIVIDE:
       BINARY_OP(NUMBER_VAL, /);
+      break;
+    case OP_NOT:
+      replace(BOOL_VAL(isFalsey(peek(0))));
       break;
     case OP_NEGATE:
       if (!IS_NUMBER(peek(0))) {
