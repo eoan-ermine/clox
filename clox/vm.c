@@ -78,7 +78,7 @@ static InterpretResult run() {
       runtimeError("Operands must be numbers.");                               \
       return INTERPRET_RUNTIME_ERROR;                                          \
     }                                                                          \
-    double b = AS_NUMBER(peek(1));                                             \
+    double b = AS_NUMBER(pop());                                               \
     replace(valueType(AS_NUMBER(peek(0)) op b));                               \
   } while (false)
 
