@@ -150,9 +150,12 @@ static InterpretResult run() {
       }
       replace(NUMBER_VAL(-AS_NUMBER(peek(0))));
       break;
-    case OP_RETURN:
+    case OP_PRINT: {
       printValue(pop());
       printf("\n");
+      break;
+    }
+    case OP_RETURN:
       return INTERPRET_OK;
     }
   }
