@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "chunk.h"
 #include "vm.h"
 
 static void repl() {

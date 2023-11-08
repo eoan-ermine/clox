@@ -2,7 +2,6 @@
 
 #include "chunk.h"
 #include "debug.h"
-#include "rle.h"
 #include "value.h"
 
 void disassembleChunk(Chunk *chunk, const char *name) {

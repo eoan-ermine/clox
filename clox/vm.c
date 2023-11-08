@@ -308,13 +308,13 @@ static InterpretResult run() {
       push(result);
     }
     }
+  }
 
 #undef READ_BYTE
 #undef READ_CONSTANT
 #undef READ_SHORT
 #undef READ_STRING
 #undef BINIARY
-  }
 }
 
 InterpretResult interpret(const char *source) {
