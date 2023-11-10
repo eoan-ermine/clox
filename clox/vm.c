@@ -310,6 +310,8 @@ static InterpretResult run() {
 
       vm.stackTop = frame->slots;
       push(result);
+      frame = &vm.frames[vm.frameCount - 1];
+      break;
     }
     }
   }
