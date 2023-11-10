@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - fib.clox
+
+tests:
+  - name: fib
+    stdout:
+      equals: "5702887"
+    exit-status: 0

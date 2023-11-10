@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - assignments.clox
+
+tests:
+  - name: assignments
+    stdout: |
+      beignets with cafe au lait
+    exit-status: 0

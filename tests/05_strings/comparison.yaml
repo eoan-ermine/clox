@@ -1,0 +1,13 @@
+working-directory: .
+
+command:
+  - clox
+  - comparison.clox
+
+tests:
+  - name: comparison
+    stdout: |
+      true
+      false
+      false
+    exit-status: 0

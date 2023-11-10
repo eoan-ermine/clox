@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - logical_not.clox
+
+tests:
+  - name: logical_not
+    stdout: |
+      false
+      true
+    exit-status: 0

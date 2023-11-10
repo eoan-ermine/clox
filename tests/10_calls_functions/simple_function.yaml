@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - simple_function.clox
+
+tests:
+  - name: simple_function
+    stdout:
+      equals: ""
+    exit-status: 0

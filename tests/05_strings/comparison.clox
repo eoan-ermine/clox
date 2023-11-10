@@ -1,0 +1,3 @@
+print "string" == "string";
+print "string" == "anotherString";
+print 0 == "string";

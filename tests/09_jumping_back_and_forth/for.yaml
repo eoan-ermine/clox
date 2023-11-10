@@ -1,0 +1,19 @@
+working-directory: .
+
+command:
+  - clox
+  - for.clox
+
+tests:
+  - name: for
+    stdout: |
+      0
+      1
+      2
+      0
+      1
+      2
+      0
+      1
+      2
+    exit-status: 0

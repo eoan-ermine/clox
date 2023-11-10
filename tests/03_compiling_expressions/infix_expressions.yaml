@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - infix_expressions.clox
+
+tests:
+  - name: infix_expressions
+    stdout:
+      equals: ""      
+    exit-status: 0

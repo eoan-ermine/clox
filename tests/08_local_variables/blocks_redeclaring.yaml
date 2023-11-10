@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - blocks_redeclaring.clox
+
+tests:
+  - name: blocks_redeclaring
+    stderr: |
+      [line 3] Error at 'a': Already a variable with this name in this scope.
+    exit-status: 65

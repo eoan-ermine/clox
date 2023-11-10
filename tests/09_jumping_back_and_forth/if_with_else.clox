@@ -1,0 +1,13 @@
+if (true) {
+    print "It's true";
+} else {
+    print "It's false";
+}
+print "Outside";
+
+if (false) {
+    print "It's true";
+} else {
+    print "It's false";
+}
+print "Outside";

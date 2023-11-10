@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - self_assignment.clox
+
+tests:
+  - name: self_assignment
+    stderr: |
+      [line 4] Error at 'a': Can't read local variable in its own initializer.
+    exit-status: 65

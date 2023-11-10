@@ -1,0 +1,2 @@
+print "st" + "ri" + "ng";
+print "st" + 0;

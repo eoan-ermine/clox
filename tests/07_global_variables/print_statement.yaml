@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - print_statement.clox
+
+tests:
+  - name: print_statement
+    stdout: |
+      3
+      7
+    exit-status: 0

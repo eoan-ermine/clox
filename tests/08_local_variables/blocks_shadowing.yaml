@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - blocks_shadowing.clox
+
+tests:
+  - name: blocks_shadowing
+    stdout: |
+      inner
+      outer
+    exit-status: 0

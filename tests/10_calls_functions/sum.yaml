@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - sum.clox
+
+tests:
+  - name: sum
+    stdout: |
+      22
+    exit-status: 0

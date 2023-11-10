@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - while.clox
+
+tests:
+  - name: while
+    stdout: |
+      3
+      6
+    exit-status: 0

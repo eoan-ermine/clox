@@ -1,0 +1,9 @@
+if (false or false) { print "F"; } else { print "T"; }
+if (false or true) { print "T"; } else { print "F"; }
+if (true or false) { print "T"; } else { print "F"; }
+if (true or true) { print "T"; } else { print "F"; }
+
+if (false and false) { print "F"; } else { print "T"; }
+if (false and true) { print "F"; } else { print "T"; }
+if (true and false) { print "F"; } else { print "T"; }
+if (true and true) { print "T"; } else { print "F"; }

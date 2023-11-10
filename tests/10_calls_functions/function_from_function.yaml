@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - function_from_function.clox
+
+tests:
+  - name: function_from_function
+    stdout:
+      equals: ""
+    exit-status: 0

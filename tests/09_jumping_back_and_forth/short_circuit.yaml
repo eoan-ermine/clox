@@ -1,0 +1,18 @@
+working-directory: .
+
+command:
+  - clox
+  - short_circuit.clox
+
+tests:
+  - name: short_circuit
+    stdout: |
+      nil
+      nil
+      true
+      false
+      false
+      true
+      nil
+      nil
+    exit-status: 0

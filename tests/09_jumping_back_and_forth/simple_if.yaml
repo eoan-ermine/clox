@@ -1,0 +1,13 @@
+working-directory: .
+
+command:
+  - clox
+  - simple_if.clox
+
+tests:
+  - name: simple_if
+    stdout: |
+      Inside
+      Outside
+      Outside
+    exit-status: 0

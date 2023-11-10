@@ -1,0 +1,9 @@
+if (true) {
+    print "Inside";
+}
+print "Outside";
+
+if (false) {
+    print "Inside";
+}
+print "Outside";

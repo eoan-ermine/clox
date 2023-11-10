@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - unary_negation.clox
+
+tests:
+  - name: unary_negation
+    stderr: |
+      Operand must be a number.
+      [line 1] in script
+    exit-status: 70

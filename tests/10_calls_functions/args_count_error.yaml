@@ -1,0 +1,15 @@
+working-directory: .
+
+command:
+  - clox
+  - args_count_error.clox
+
+tests:
+  - name: args_count_error
+    stderr: |
+      Expected 0 arguments but got 2.
+      [line 4] in c()
+      [line 2] in b()
+      [line 1] in a()
+      [line 7] in script
+    exit-status: 70

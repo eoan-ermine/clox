@@ -1,0 +1,11 @@
+working-directory: .
+
+command:
+  - clox
+  - basic_arithmetics.clox
+
+tests:
+  - name: basic_arithmetics
+    stdout:
+      equals: ""      
+    exit-status: 0

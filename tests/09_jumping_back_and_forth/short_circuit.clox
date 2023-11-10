@@ -1,0 +1,53 @@
+{
+    {
+        var a;
+        if (true or (a = false)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (true or (a = true)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (false or (a = true)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (false or (a = false)) { }
+        print a;
+    }
+}
+
+{
+    {
+        var a;
+        if (true and (a = false)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (true and (a = true)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (false and (a = true)) { }
+        print a;
+    }
+
+    {
+        var a;
+        if (false and (a = false)) { }
+        print a;
+    }
+}
+
+

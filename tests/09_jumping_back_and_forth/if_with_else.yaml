@@ -1,0 +1,14 @@
+working-directory: .
+
+command:
+  - clox
+  - if_with_else.clox
+
+tests:
+  - name: if_with_else
+    stdout: |
+      It's true
+      Outside
+      It's false
+      Outside
+    exit-status: 0

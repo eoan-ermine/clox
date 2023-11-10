@@ -1,0 +1,14 @@
+working-directory: .
+
+command:
+  - clox
+  - concatenation.clox
+
+tests:
+  - name: concatenation
+    stdout: |
+      string
+    stderr: |
+      Operands must be two numbers or two strings.
+      [line 2] in script
+    exit-status: 70

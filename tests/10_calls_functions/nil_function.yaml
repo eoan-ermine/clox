@@ -1,0 +1,12 @@
+working-directory: .
+
+command:
+  - clox
+  - nil_function.clox
+
+tests:
+  - name: nil_function
+    stdout: |
+      Yes we are!
+      nil
+    exit-status: 0
