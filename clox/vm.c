@@ -102,7 +102,6 @@ static void concatenate() {
 void replace(Value value) { *(vm.stackTop - 1) = value; }
 
 static bool call(ObjFunction *function, int argCount) {
-  // printf("HERE!!! %d %d", argCount, function->arity);
   if (argCount != function->arity) {
     runtimeError("Expected %d arguments but got %d.", function->arity,
                  argCount);
@@ -165,6 +164,7 @@ static InterpretResult run() {
   } while (false)
 
   for (;;) {
+
 #ifdef DEBUG_TRACE_EXECUTION
     printf("          ");
     for (Value *slot = vm.stack; slot < vm.stackTop; slot++) {
@@ -318,7 +318,7 @@ static InterpretResult run() {
 #undef READ_CONSTANT
 #undef READ_SHORT
 #undef READ_STRING
-#undef BINIARY
+#undef BINARY_OP
 }
 
 InterpretResult interpret(const char *source) {

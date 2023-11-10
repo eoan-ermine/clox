@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "chunk.h"
+#include "common.h"
 #include "compiler.h"
 #include "object.h"
 #include "scanner.h"
@@ -53,7 +54,7 @@ typedef struct {
   ObjFunction *function;
   FunctionType type;
 
-  Local locals[UINT8_MAX];
+  Local locals[UINT8_COUNT];
   int localCount;
   int scopeDepth;
 } Compiler;
@@ -252,7 +253,7 @@ static int resolveLocal(Compiler *compiler, Token *name) {
 }
 
 static void addLocal(Token name) {
-  if (current->localCount == UINT8_MAX) {
+  if (current->localCount == UINT8_COUNT) {
     error("Too many local variablesin function.");
     return;
   }
