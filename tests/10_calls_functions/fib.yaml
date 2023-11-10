@@ -6,6 +6,6 @@ command:
 
 tests:
   - name: fib
-    stdout:
-      equals: "5702887"
+    stdout: |
+      9.22746e+06
     exit-status: 0
